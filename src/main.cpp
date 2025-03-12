@@ -1,14 +1,15 @@
 #include <Arduino.h>
 #include <Motor.h>
 
-const int potentiometer = A0;
+#define potentiometer A0
+
 int value = 255;
 
 Motor motor;
 
 void setup()
 {
-  motor.PinOut(D5, D6);
+  motor.PinOut(5, 6);
   pinMode(potentiometer, INPUT);
   Serial.begin(115200);
 }
