@@ -1,32 +1,26 @@
-# Boilerplate Platformio CLI
+# Micro Rotary
 
-Boilerplate para Projetos Arduino com o PlatformIO CLI! Este projeto foi criado com o objetivo de facilitar e agilizar o processo de desenvolvimento de aplicações baseadas em Arduino.
+## How to Use:
 
-## O que é o Boilerplate?
+1. Clone or download this repository.
+2. Customize the `platformio.ini` file with your board settings.
+3. Use PlatformIO CLI to compile, upload, and debug the firmware.
 
-Este boilerplate é uma estrutura inicial que contém as configurações básicas e os arquivos necessários para começar a desenvolver projetos com o Arduino de forma eficiente. O PlatformIO CLI é uma poderosa ferramenta de linha de comando para o desenvolvimento de firmware embarcado, proporcionando um ambiente de desenvolvimento unificado e simplificado.
+## Useful Commands
 
-## Como Utilizar:
-
-Clone ou faça o download deste repositório.
-Personalize o platformio.ini com as configurações da sua placa.
-Utilize o PlatformIO CLI para compilar, fazer o upload e depurar o firmware.
-
-## Códigos úteis
-
-### Criando os arquivos de configuração para o vscode:
+### Creating configuration files for VS Code:
 
 ```shell
 platformio init --ide vscode
 ```
 
-### Instalação das Libs de dependências
+### Installing dependency libraries
 
 ```shell
 pio run
 ```
 
-### Upload para o arduino
+### Uploading to Arduino
 
 ```shell
 pio run --target upload
@@ -37,11 +31,3 @@ pio run --target upload
 ```shell
 pio device monitor
 ```
-
-Saiba mais sobre o platformio.io em [platformIO](https://platformio.org/)
-
-Lista de placas para inserir no platformio.ini [boards](https://docs.platformio.org/en/latest/boards/)
-
-Sinta-se à vontade para contribuir, reportar problemas ou sugerir melhorias. Juntos, podemos tornar este boilerplate ainda mais útil e robusto para a comunidade de desenvolvedores Arduino.
-
-Divirta-se codificando!
