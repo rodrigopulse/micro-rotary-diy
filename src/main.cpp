@@ -1,31 +1,26 @@
 #include <Arduino.h>
-#include <Motor.h>
 
-#define potentiometer A0
+const int potentiometer = A0;
 
-int value = 255;
-
-Motor motor;
+int speed = 255;
+int pin1 = 5;
+int pin2 = 6;
 
 void setup()
 {
-  motor.PinOut(5, 6);
+  pinMode(pin1, OUTPUT);
+  pinMode(pin2, OUTPUT);
   pinMode(potentiometer, INPUT);
-  Serial.begin(115200);
 }
 
 void loop()
 {
   int potenciometerValue = analogRead(potentiometer);
 
-  value = map(potenciometerValue, 0, 1023, 100, 255);
+  speed = map(potenciometerValue, 0, 1023, 100, 255);
 
-  motor.Speed(value);
-  motor.Forward();
+  analogWrite(pin1, speed);
+  digitalWrite(pin2, LOW);
 
-  Serial.print("Value: ");
-  Serial.println(value);
-  Serial.println("Potentiometer Value: ");
-  Serial.println(potenciometerValue);
   delay(1000);
 }
